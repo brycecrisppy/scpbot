@@ -13,6 +13,12 @@
     "selenium-webdriver": "^4.1.1"
   },
   "devDependencies": {
-    "jest": "^27.5.0"
+    "@babel/core": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@types/jest": "^27.4.0",
+    "babel": "^6.23.0",
+    "babel-jest": "^27.5.0",
+    "jest": "^27.5.0",
+    "ts-jest": "^27.1.3"
   }
 }
