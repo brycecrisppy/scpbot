@@ -20,7 +20,7 @@ test("Test create string pair", () => {
 })
 
 test("Webdriver stuffs", async () => {
-    const header = new HeaderComponent().init()
+    const header = await new HeaderComponent().init()
 
     try {
         Driver.driver = await Driver.init()
