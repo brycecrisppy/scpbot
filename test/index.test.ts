@@ -21,11 +21,14 @@ test("Test create string pair", () => {
 
 test("Webdriver stuffs", async () => {
     const xpath = "//*[@id=\"header\"]/h1/a/span"
-    //const baseComponent = new BaseComponent(By.xpath(xpath))
+    const baseComponent = new BaseComponent(By.xpath(xpath))
     try {
         Driver.driver = await Driver.init()
 
         await Driver.driver.get("https://scp-wiki.wikidot.com/")
+        await baseComponent.waitForDisplay()
+        await baseComponent.click()
+        await baseComponent.waitForDisplay()
     } finally {
         await Driver.driver.quit()
     }

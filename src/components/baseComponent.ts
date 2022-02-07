@@ -32,7 +32,7 @@ export class BaseComponent {
     // region | Wait Methods -------------------------------------------------------------------------------------------
 
     async waitForDisplay() {
-        await Driver.driver.wait(until.)
+        await Driver.driver.wait(until.elementIsVisible, 5000)
     }
 
     //endregion
