@@ -4,7 +4,7 @@ const {By} = require("selenium-webdriver")
 
 export class HeaderComponent extends BaseComponent {
 
-    headerXpath: String = "\"\"\n"
+    headerXpath: String = "//*[@id=\"header\"]"
     searchXpath: String = "//*[@id=\"search-top-box-input\"]"
     titleXpath: String = "//*[@id=\"header\"]/h1/a/span"
 

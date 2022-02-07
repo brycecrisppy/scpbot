@@ -16,7 +16,7 @@ test("Test create number pair", () => {
 test("Test create string pair", () => {
     const stringPair: Pair = createStringPair("hello", "world")
     expect(stringPair.x).toBe("hello")
-    expect(stringPair.y).toBe("worldasdf")
+    expect(stringPair.y).toBe("world")
 })
 
 test("Webdriver stuffs", async () => {
