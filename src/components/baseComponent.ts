@@ -11,7 +11,7 @@ export class BaseComponent {
 
     // region | Constructor --------------------------------------------------------------------------------------------
 
-    constructor(matcher) {
+    init(matcher: typeof By) {
         this.matcher = matcher
     }
 

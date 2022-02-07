@@ -1,5 +1,5 @@
 import {sum, createNumberPair, createStringPair, Pair} from "../src";
-import {BaseComponent} from "../src/components/baseComponent";
+import {HeaderComponent} from "../src/components/headerComponent";
 import {Driver} from "../src/utilities/driver";
 const {By, until} = require("selenium-webdriver")
 
@@ -20,15 +20,19 @@ test("Test create string pair", () => {
 })
 
 test("Webdriver stuffs", async () => {
-    const xpath = "//*[@id=\"header\"]/h1/a/span"
-    const baseComponent = new BaseComponent(By.xpath(xpath))
+    const header = new HeaderComponent().init()
+
     try {
         Driver.driver = await Driver.init()
 
         await Driver.driver.get("https://scp-wiki.wikidot.com/")
-        await baseComponent.waitForDisplay()
-        await baseComponent.click()
-        await baseComponent.waitForDisplay()
+        await header.waitForDisplay()
+        await header.verifyTitle()
+        await header.clickOnTitle()
+        await header.waitForDisplay()
+        await header.verifyTitle()
+        await header.search()
+        await header.verifyTitle()
     } finally {
         await Driver.driver.quit()
     }
