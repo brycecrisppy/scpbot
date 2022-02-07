@@ -11,9 +11,9 @@ export class HeaderComponent extends BaseComponent {
     titleMatcher = By.xpath(this.titleXpath)
     searchMatcher = By.xpath(this.searchXpath)
 
-    init() {
+    async init(matcher: typeof By) {
         this.matcher = By.xpath(this.headerXpath)
-        super.init(this.matcher)
+        await super.init(this.matcher)
 
         return this
     }

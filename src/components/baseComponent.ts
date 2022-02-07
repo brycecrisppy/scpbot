@@ -16,6 +16,8 @@ export class BaseComponent {
     async init(matcher: typeof By) {
         this.matcher = matcher
         this.element = await Element.init(this.matcher).element()
+
+        return this
     }
 
     // endregion
